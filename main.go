@@ -1,8 +1,6 @@
 package main
 
 import (
-	"net/http"
-
 	"github.com/gin-gonic/gin"
 )
 
@@ -22,23 +20,10 @@ var books = []Book{
 	{Id: "5", Title: "The Catcher in the Rye", Author: "J.D. Salinger", Quantity: 5},
 }
 
-func getBooks(c *gin.Context) {
-	c.IndentedJSON(http.StatusOK, books)
-}
-
-func createBook(c *gin.Context) {
-	var newBook Book
-	if err := c.ShouldBindJSON(&newBook); err != nil {
-		c.JSON(http.StatusBadRequest, gin.H{"error": err.Error()})
-		return
-	}
-	books = append(books, newBook)
-	c.IndentedJSON(http.StatusOK, newBook)
-}
-
 func main() {
 	router := gin.Default()
 	router.GET("/books", getBooks)
 	router.POST("/books", createBook)
+	router.GET("/books/:id", bookById)
 	router.Run("localhost:8080")
 }
