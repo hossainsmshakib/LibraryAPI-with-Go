@@ -41,13 +41,13 @@ This API is a basic example of a library management system. It demonstrates core
 
     ```bash
     git clone [https://github.com/hossainsmshakib/LibraryAPI-with-Go](https://www.google.com/search?q=https://github.com/hossainsmshakib/LibraryAPI-with-Go)  # Replace with your repo URL
-    cd libraryapi
+    cd LibraryAPI-with-Go
     ```
 
 2.  Initialize Go modules:
 
     ```bash
-    go mod init [github.com/yourusername/libraryapi](https://www.google.com/search?q=https://github.com/yourusername/libraryapi) # Replace with your module path
+    go mod init [https://github.com/hossainsmshakib/LibraryAPI-with-Go](https://www.google.com/search?qhttps://github.com/hossainsmshakib/LibraryAPI-with-Go) # Replace with your module path
     ```
 
 3.  Get the Gin framework:
